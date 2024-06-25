@@ -21,7 +21,7 @@ import { all, createLowlight } from 'lowlight'
 import StarterKit from '@tiptap/starter-kit'
 import StarterKitConfigure from './configure/StarterKit'
 import bubbleMenu from "./extensions/bubble-menu.vue";
-import { onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, onUnmounted, ref } from "vue";
 import SlashCommands from './extensions/slash-menu/command'
 import suggestion from './extensions/slash-menu/index'
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight"
@@ -123,8 +123,14 @@ const editorInit = () => {
 }
 
 onMounted(() => {
-    if(props.data.id) {
-        editorInit()
-    }
+    editorInit()
+})
+
+onBeforeUnmount(async() => {
+    console.log("更新", editorData.value)
+})
+
+onUnmounted(() => {
+    editor.value?.destroy()
 })
 </script>
