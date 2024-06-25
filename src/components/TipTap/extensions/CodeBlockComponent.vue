@@ -1,13 +1,9 @@
 <template>
     <node-view-wrapper class="code-block">
-        <select contenteditable="false" v-model="selectedLanguage">
-            <option :value="null">
-                auto
-            </option>
-            <option v-for="(language, index) in languages" :value="language" :key="index">
-                {{ language }}
-            </option>
-        </select>
+        <el-select contenteditable="false" v-model="selectedLanguage" filterable placeholder="选择代码语言" style="cursor: pointer;width: 200px" size="small">
+            <el-option :value="null" label="auto" />
+            <el-option v-for="(language, index) in languages" :key="index" :label="language" :value="language" />
+        </el-select>
         <button @click="copyCodeContent">
             <span class="action_btn">
                 <font-awesome-icon icon="check" v-if="isClipboard" />
@@ -53,9 +49,13 @@ const copyCodeContent = () => {
         position: absolute;
         top: 0.5rem;
         right: 0.5rem;
+        width: 25px;
+        height: 25px;
+        color: #272727;
+        cursor: pointer;
     }
 
-    select {
+    .el-select {
         position: absolute;
         top: 0.5rem;
         left: 0.5rem;

@@ -1,19 +1,11 @@
-interface cacheType {
-    enable: boolean
+import { JSONContent } from "@tiptap/core"
+
+interface propsEditorDataType {
     id: string
+    label: string
+    content: JSONContent | string
+    [x: string]: any
 }
-
-interface fontCountType {
-    enable: boolean
-    limit: number | null
-    mode: "textSize" | "nodeSize"
-}
-
-interface editorOptions {
-    cache: cacheType,
-    fontCount: fontCountType
-}
-
 export type {
-    editorOptions
+    propsEditorDataType
 }

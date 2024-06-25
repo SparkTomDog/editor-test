@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: "/tiptap",
         name: "TipTap",
-        component: () => import("../components/TipTap/index.vue")
+        component: () => import("../components/TipTap/testTemplate.vue")
     },
     {
         path: "/",
