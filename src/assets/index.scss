@@ -1,0 +1,23 @@
+html, body, #app {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#Contriner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    #ContrinerHeader {
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    #ContrinerMain {
+        flex: 1;
+    }
+}

@@ -1,0 +1,170 @@
+.spark-editor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.spark-editor-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .tiptap {
+        width: 60%;
+    }
+
+    .ProseMirror-focused {
+        outline: none;
+        border: none;
+    }
+}
+
+.spark-bubble-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        transition: all 0.2s;
+        cursor: pointer;
+        margin-right: 2px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+            background-color: antiquewhite;
+        }
+
+        &.is-active {
+            background-color: antiquewhite;
+            color: #919191;
+        }
+    }
+}
+
+.spark-bubble-menu-table {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        transition: all 0.2s;
+        cursor: pointer;
+        margin-right: 2px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: antiquewhite;
+        }
+
+        &.is-active {
+            background-color: antiquewhite;
+            color: #919191;
+        }
+    }
+}
+
+.spark-floating-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .spark-floating-menu-item {
+        width: 200px;
+        height: 30px;
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        background-color: #fff;
+        transition: all 0.2s;
+        cursor: pointer;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        .spark-floating-menu-item-icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spark-floating-menu-item-label {
+            flex: 1;
+        }
+
+        &:hover {
+            background-color: antiquewhite;
+            color: #919191;
+        }
+
+        &.is-active,&.is-selected {
+            background-color: antiquewhite;
+            color: #919191;
+        }
+    }
+
+    .spark-floating-menu-tip {
+        width: 200px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .spark-floating-menu-tip-item {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 12px;
+        }
+    }
+}
+
+// .spark-editor-item {
+//     overflow: overlay;
+// }
+
+// /* 滚动条整体 */
+// .scroll-container::-webkit-scrollbar {
+//     height: 20px;
+//     width: 20;
+// }
+// /* 两个滚动条交接处 -- x轴和y轴 */
+// .scroll-container::-webkit-scrollbar-corner {
+//     background-color: transparent;
+// }
+
+// /* 滚动条滑块 */
+// .scroll-container::-webkit-scrollbar-thumb {
+//     border-radius: 10px;
+//     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     background: #535353;
+// }
+
+// /* 滚动条轨道 */
+// .scroll-container::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     border-radius: 10px;
+//     background: #ededed;
+// }
+
+// /* 滚动条两端按钮 */
+// .scroll-container::-webkit-scrollbar-button {
+// }
