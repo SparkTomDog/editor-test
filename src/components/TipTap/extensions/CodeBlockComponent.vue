@@ -4,9 +4,6 @@
             <option :value="null">
                 auto
             </option>
-            <option disabled>
-                —
-            </option>
             <option v-for="(language, index) in languages" :value="language" :key="index">
                 {{ language }}
             </option>
@@ -38,7 +35,6 @@ const selectedLanguage = computed({
 })
 
 const copyCodeContent = () => {
-    // console.log(props.node.content.toJSON()[0])
     const text = props.node.content.toJSON()[0].text
     window.navigator.clipboard.writeText(text).then(() => {
         isClipboard.value = true
